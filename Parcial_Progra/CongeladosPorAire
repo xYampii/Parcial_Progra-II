@@ -1,0 +1,48 @@
+
+
+// Clase CongeladosPorAire
+class CongeladosPorAire extends ProductosCongelados {
+    private double porcentajeNitrogeno;
+    private double porcentajeOxigeno;
+    private double porcentajeDioxidoCarbono;
+    private double porcentajeVaporAgua;
+
+    public CongeladosPorAire(Date fechaCaducidad, String numeroLote, String paisOrigen,
+                             double temperaturaMantenimiento, double porcentajeNitrogeno,
+                             double porcentajeOxigeno, double porcentajeDioxidoCarbono,
+                             double porcentajeVaporAgua) {
+        super(fechaCaducidad, numeroLote, paisOrigen, temperaturaMantenimiento);
+        this.porcentajeNitrogeno = porcentajeNitrogeno;
+        this.porcentajeOxigeno = porcentajeOxigeno;
+        this.porcentajeDioxidoCarbono = porcentajeDioxidoCarbono;
+        this.porcentajeVaporAgua = porcentajeVaporAgua;
+    }
+
+    public double getPorcentajeNitrogeno() {
+        return porcentajeNitrogeno;
+    }
+
+    public double getPorcentajeOxigeno() {
+        return porcentajeOxigeno;
+    }
+
+    public double getPorcentajeDioxidoCarbono() {
+        return porcentajeDioxidoCarbono;
+    }
+
+    public double getPorcentajeVaporAgua() {
+        return porcentajeVaporAgua;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Tipo: Congelados por Aire");
+        System.out.println("Porcentaje de Nitrógeno: " + porcentajeNitrogeno);
+        System.out.println("Porcentaje de Oxígeno: " + porcentajeOxigeno);
+        System.out.println("Porcentaje de Dióxido de Carbono: " + porcentajeDioxidoCarbono);
+        System.out.println("Porcentaje de Vapor de Agua: " + porcentajeVaporAgua);
+        System.out.println("País de Origen: " + getPaisOrigen());
+        System.out.println("Temperatura de Mantenimiento: " + getTemperaturaMantenimiento());
+        System.out.println("Fecha de Caducidad: " + getFechaCaducidad());
+        System.out.println("Número de Lote: " + getNumeroLote());
+    }
+}

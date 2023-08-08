@@ -1,0 +1,30 @@
+package Producto;
+
+// Clase ProductosCongelados
+class ProductosCongelados extends Producto {
+    private String paisOrigen;
+    private double temperaturaMantenimiento;
+
+    public ProductosCongelados(Date fechaCaducidad, String numeroLote, String paisOrigen,
+                               double temperaturaMantenimiento) {
+        super(fechaCaducidad, numeroLote);
+        this.paisOrigen = paisOrigen;
+        this.temperaturaMantenimiento = temperaturaMantenimiento;
+    }
+
+    public String getPaisOrigen() {
+        return paisOrigen;
+    }
+
+    public double getTemperaturaMantenimiento() {
+        return temperaturaMantenimiento;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Tipo: Productos Congelados");
+        System.out.println("País de Origen: " + paisOrigen);
+        System.out.println("Temperatura de Mantenimiento: " + temperaturaMantenimiento);
+        System.out.println("Fecha de Caducidad: " + getFechaCaducidad());
+        System.out.println("Número de Lote: " + getNumeroLote());
+    }
+}
